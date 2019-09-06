@@ -39,7 +39,7 @@ section.gate div.key div.input {
   position: relative;
   flex-grow: 1;
 }
-section.gate div.key div.input div {
+section.gate div.key div.input div, section.gate div.key div.input textarea {
   background: #000;
   color: white;
   font-family: monospace;
@@ -47,7 +47,12 @@ section.gate div.key div.input div {
   letter-spacing: 0.5em;
   padding: 12px 20px;
   border: 2px solid lime;
+  display: block;
+  resize: none;
   overflow: hidden;
+}
+section.gate div.key div.input textarea {
+  width: calc(100% - 44px);
 }
 section.gate div.key div.input div.overlay {
   position: absolute;

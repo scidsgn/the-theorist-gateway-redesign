@@ -52,7 +52,7 @@ section.gate {
             position: relative;
             flex-grow: 1;
 
-            div {
+            div, textarea {
                 background: #000;
                 color: white;
 
@@ -63,7 +63,14 @@ section.gate {
                 padding: 12px 20px;
                 border: 2px solid lime;
 
+                display: block;
+
+                resize: none;
                 overflow: hidden;
+            }
+
+            textarea {
+                width: calc(100% - 44px);
             }
 
             div.overlay { 
