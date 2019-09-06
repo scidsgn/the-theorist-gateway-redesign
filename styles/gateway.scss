@@ -1,0 +1,659 @@
+body {
+    //Original Gateway background
+    background-color: #0f0f18;
+    background-image: url("../../res/images/background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    margin: 64px 64px 64px 320px;
+}
+
+div.buttons {
+    display: flex;
+
+    button {
+        background: #2e2e57;
+        color: #fff;
+
+        padding: 4px 12px;
+        margin: 0px 8px 0px 0px;
+        border: none;
+        border-radius: 16px;
+
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 12pt;
+    }
+
+    button:hover {
+        background: #393975;
+        color: #fff;
+    }
+
+    button:active {
+        background: #fff;
+        color: #000;
+    }
+}
+
+aside {
+    position: fixed;
+    left: 32px;
+    top: 64px;
+    bottom: 64px;
+    width: 256px;
+
+    button.expand {
+        display: none;
+    }
+
+    img.chaosLogo {
+        width: 64px;
+        height: auto;
+        margin: 0px 12px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        a {
+            color: red;
+
+            font-size: 12pt;
+            font-weight: 500;
+
+            padding: 2px 16px;
+
+            text-decoration: none;
+        }
+
+        a:after {        
+            content: ">";
+
+            margin-left: 16px;
+        }
+
+        a:hover {
+            background: red;
+            color: #000000;
+        }
+    }
+
+    div.playerInfo {
+        margin: 0px 16px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        p.playerName {
+            margin: 32px 0px 4px 0px;
+
+            font-size: 18pt;
+        }
+
+        div.stats {
+            display: flex;
+            flex-wrap: wrap;
+
+            div.stat {
+                margin-bottom: 8px;
+                margin-right: 8px;
+                border-radius: 16px;
+    
+                display: flex;
+    
+                span {
+                    color: #000;
+    
+                    margin: 4px 12px 4px 8px;
+    
+                    display: flex;
+    
+                    img {
+                        width: auto;
+                        height: 1.3em;
+            
+                        margin-right: 8px;
+    
+                        transform: translateY(10%);
+                    }
+                }
+    
+                button {
+                    background: transparent;
+                    color: #000;
+    
+                    margin: 0px;
+                    padding: 4px 12px;
+                    border: none;
+                    border-radius: 0px 16px 16px 0px;
+    
+                    font-family: "Poppins", sans-serif;
+                    font-weight: 500;
+                    font-size: 12pt;
+                }
+    
+                button:hover {
+                    background: #00000018;
+                }
+    
+                button:active {
+                    background: #fff;
+                    color: #000;
+                }
+            }
+        }
+
+        div.stat.statProgress {
+            background: lime;
+        }
+
+        div.stat.statPosition {
+            background: white;
+        }
+
+        div.stat.statPoints {
+            background: rgb(255, 217, 0);
+        }
+    }
+
+    footer {
+        margin-top: 32px;
+
+        display: flex;
+
+        img {
+            width: auto;
+            height: 32px;
+
+            margin-right: 16px;
+        }
+    }
+}
+
+div.gates {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    div.gate {
+        --var-gateColor: black;
+
+        min-width: 160px;
+
+        margin: 0px 8px 8px 0px;
+
+        border: 2px solid var(--var-gateColor);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p.name {
+            width: 100%;
+
+            background: var(--var-gateColor);
+            color: #000;
+            
+            font-weight: 700;
+            text-transform: uppercase;
+
+            margin: 0px;
+            padding: 4px 0px;
+
+            text-align: center;
+        }
+
+        img {
+            width: auto;
+            height: 128px;
+        }
+
+        div.keys {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 21px;
+                height: 31px;
+                margin: 8px 2px 0px 2px;
+            }
+        }
+
+        a {
+            background: var(--var-gateColor);
+
+            margin: 8px 0px;
+        }
+
+        ::selection {
+            background: var(--var-gateColor);
+        }
+    }
+
+    div.gate.gate1 {
+        --var-gateColor: #E6335A;
+    }
+
+    div.gate.gate2 {
+        --var-gateColor: #3FBA84;
+    }
+
+    div.gate.gate3 {
+        --var-gateColor: #34A9F6;
+    }
+
+    div.gate.gate4 {
+        --var-gateColor: #FE7B51;
+    }
+
+    div.gate.gate5 {
+        --var-gateColor: #F0BE37;
+    }
+
+    div.gate.gate6 {
+        --var-gateColor: #A74CC1;
+    }
+
+    div.gate.gate7 {
+        --var-gateColor: #282828;
+    }
+}
+
+a.enterButton {
+    background: rgb(155, 15, 15);
+    color: #000;
+
+    padding: 4px 24px;
+    border-radius: 24px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 14pt;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a.enterButton:hover {
+    background: rgb(211, 16, 16);
+}
+
+a.enterButton:active {
+    background: #fff !important;
+    color: #000;
+}
+
+section {
+    header {
+        margin: 16px 0px 8px 0px;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        h1 {
+            margin: 4px 8px 4px 0px;
+
+            font-weight: 500;
+
+            flex-grow: 1;
+        }
+    }
+}
+
+div.searchBox {
+    border: 2px solid #ff32f1;
+
+    display: flex;
+
+    input {
+        background: #00000080;
+        color: #fff;
+
+        padding: 4px 16px;
+        border: none;
+
+
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 12pt;
+    }
+
+    button {
+        background: #ff32f1;
+        color: #000;
+
+        padding: 4px 16px;
+        border: none;
+
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 12pt;
+    }
+
+    button:hover {
+        background: #ff5ff4;
+        color: #000;
+    }
+
+    button:active {
+        background: #fff;
+        color: #000;
+    }
+}
+
+div.leaderboardScroller {
+    height: 450px;
+
+    border: 2px solid hsl(304, 100%, 60%);
+
+    overflow-y: auto;
+
+    table.leaderboard {
+        width: 100%;
+    
+        border-spacing: 0px;
+    
+        td {
+            background: #00000080;
+    
+            padding: 4px;
+        }
+    
+        tr:last-child td {
+            border-bottom: none;
+        }
+    
+        tr.top10 {
+            background: #a0226b5d;
+        }
+    
+        td.name {        
+            font-family: monospace;
+            font-size: 12pt;
+    
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    
+        td.gates, td.keys, td.time {
+            font-variant-numeric: tabular-nums;
+            font-feature-settings: "tnum";
+    
+            white-space: nowrap;
+    
+            img {
+                width: auto;
+                height: 1.3em;
+    
+                margin-right: 4px;
+    
+                filter: invert(1);
+                transform: translateY(20%);
+            }
+        }
+    }
+}
+
+div.pageSwitcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        width: 140px;
+
+        font-size: 14pt;
+        text-align: center;
+    }
+
+    button {
+        width: 32px;
+        background: #ff32f1;
+        color: #000;
+
+        padding: 2px 8px;
+        margin: 2px;
+        border: none;
+
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 12pt;
+    }
+
+    button:hover {
+        background: #ff5ff4;
+    }
+
+    button:active {
+        background: #fff;
+        color: #000;
+    }
+
+    button:disabled {
+        opacity: 0.3;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 881px) {
+    body {
+        margin: 64px 32px 32px 32px;
+    }
+
+    aside {
+        position: unset;
+        width: unset;
+        
+        img.chaosLogo {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: auto;
+            height: 40px;
+
+            z-index: 1000;
+        }
+
+        nav {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+
+            //Original Gateway background
+            background-color: #0f0f18;
+            background-image: url("../../res/images/background.png");
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            padding-left: 64px;
+            
+            flex-direction: row;
+            
+            z-index: 100;
+
+            a {
+                padding: 8px 16px;
+            }
+
+            a:after {
+                content: "";
+
+                margin: 0px;
+            }
+        }
+
+        div.playerInfo {
+            margin: 0px 0px 8px 0px;
+
+            flex-direction: row;
+
+            p.playerName {
+                margin: 0px;
+
+                flex-grow: 1;
+            }
+
+            div.buttons {
+                position: fixed;
+                top: 4px;
+                right: 0px;
+                z-index: 100;
+            }
+
+            div.stats {
+                justify-content: flex-end;
+            }
+        }
+
+        footer {
+            display: none;
+        }
+    }
+
+    div.gates {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 880px) {
+    body {
+        margin: 64px 32px 32px 32px;
+    }
+
+    aside {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: unset;
+        max-width: 100%;
+        height: unset;
+        max-height: calc(100% - 64px - 16px);
+
+        background: #0f0f18;
+
+        padding: 64px 0px 16px 0px;
+        box-shadow: 0px 0px 16px #000;
+
+        overflow: auto;
+
+        img.chaosLogo {
+            position: fixed;
+            left: 32px;
+            top: 0px;
+            width: auto;
+            height: 40px;
+
+            z-index: 10;
+        }
+
+        button.expand {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            width: 40px;
+            height: 40px;
+
+            background: transparent;
+
+            border: none;
+
+            transform: translate(-50%, -50%);
+            display: block;
+        }
+
+        button.expand:before {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 24px;
+            height: 2px;
+
+            background: red;
+            content: "";
+
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: all 0.2s;
+        }
+
+        button.expand:after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 24px;
+            height: 2px;
+
+            background: red;
+            content: "";
+
+            transform: translate(-50%, -50%) rotate(-45deg);
+            transition: all 0.2s;
+        }
+
+        nav a {
+            font-size: 16pt;
+        }
+    }
+
+    aside:not(.expanded) {
+        width: 96px;
+        height: 40px;
+
+        //Original Gateway background
+        background-color: #0f0f18;
+        background-image: url("../../res/images/background.png");
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        padding: 0px;
+        box-shadow: none;
+
+        button.expand:before {
+            top: 16px;
+            width: 16px;
+
+            transform: translate(-50%, -50%);
+        }
+
+        button.expand:after {
+            top: 24px;
+            width: 16px;
+
+            transform: translate(-50%, -50%);
+        }
+
+        nav {
+            display: none;
+        }
+    
+        div.playerInfo {
+            display: none;
+        }
+    
+        div.buttons {
+            display: none;
+        }
+    
+        footer {
+            display: none;
+        }
+    }
+
+    div.gates {
+        justify-content: center;
+    }
+
+    div.pageSwitcher button {
+        padding: 4px 8px;
+    }
+}

@@ -1,0 +1,153 @@
+section.gate {
+    header {
+        h1 span {
+            color: lime;
+        }
+
+        div.keys {
+            display: flex;
+
+            div.key {
+                width: 44px;
+                height: 44px;
+
+                margin-left: 8px;
+                border-radius: 22px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            div.key.active {
+                background: lime;
+
+                img {
+                    filter: brightness(0);
+                }
+            }
+        }
+    }
+
+    div.puzzle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        iframe {
+            width: 100%;
+            height: 450px;
+        }
+
+        div.buttons {
+            margin: 8px 0px;
+        }
+    }
+
+    div.key {
+        display: flex;
+        align-items: flex-start;
+
+        div.input {
+            position: relative;
+            flex-grow: 1;
+
+            div {
+                background: #000;
+                color: white;
+
+                font-family: monospace;
+                font-size: 14pt;
+                letter-spacing: 0.5em;
+
+                padding: 12px 20px;
+                border: 2px solid lime;
+
+                overflow: hidden;
+            }
+
+            div.overlay { 
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+
+                background: transparent;
+                color: gray;
+
+                pointer-events: none;
+            }
+        }
+
+        button {
+            background: lime;
+            color: #000;
+        
+            padding: 8px 24px;
+            margin-left: 16px;
+            border: none;
+            border-radius: 24px;
+        
+            font-family: "Poppins", sans-serif;
+            font-weight: 800;
+            font-size: 14pt;
+        }
+        
+        button:hover {
+            background: rgb(115, 255, 73);
+        }
+        
+        button:active {
+            background: #fff !important;
+            color: #000;
+        }
+    }
+}
+
+section.hints {
+    div.hints {
+        display: flex;
+        flex-wrap: wrap;
+
+        div.hint {
+            width: 200px;
+            height: 200px;
+
+            background: #0f0f18;
+
+            margin: 0px 8px 8px 0px;
+            border: 2px solid rgb(0, 153, 255);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-size: 14pt;
+                text-align: center;
+
+                margin: 0;
+            }
+
+            p.time {
+                color: lime;
+            }
+        }
+    }
+}
+
+@media (max-width: 880px) {
+    div.key {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        div.input {
+            width: 100%;
+        }
+
+        button {
+            margin-top: 8px;
+        }
+    }
+}

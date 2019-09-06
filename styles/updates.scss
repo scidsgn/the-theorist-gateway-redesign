@@ -1,0 +1,23 @@
+section.article {
+    header {
+        h1 {
+            font-family: "IBM Plex Serif", serif;
+            font-size: 20pt;
+        }
+    }
+
+    content {
+        h2 {
+            text-decoration: underline lime;
+
+            margin: 0px;
+        }
+
+        h3 {
+            font-weight: 500;
+            text-decoration: underline lime;
+
+            margin: 0px;
+        }
+    }
+}

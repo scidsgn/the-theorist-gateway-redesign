@@ -1,0 +1,130 @@
+// The Theorist Gateway landing page
+
+body {
+    background: #000000;
+    color: #E4E4E4;
+}
+
+img.chaosLogo {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+@keyframes ChaosRingAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes ChaosRingRotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes ChaosRingRotateAlt {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+img.chaosRing {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 512px;
+    height: 512px;
+
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+img.chaosRing.ring1 {
+    animation: ChaosRingAppear 0.4s 0.5s forwards,
+               ChaosRingRotate 10s linear infinite;
+}
+
+img.chaosRing.ring2 {
+    animation: ChaosRingAppear 0.5s 0.75s forwards,
+               ChaosRingRotateAlt 13s linear infinite;
+}
+
+img.chaosRing.ring3 {
+    animation: ChaosRingAppear 0.6s 1s forwards,
+               ChaosRingRotate 16s linear infinite;
+}
+
+h1 {
+    position: fixed;
+    top: calc(50% - 300px);
+    left: 50%;
+
+    margin: 0px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+    letter-spacing: 0.2ch;
+    text-transform: uppercase;
+    text-align: center;
+    
+    transform: translate(-50%, -50%);
+}
+
+a.enterButton {
+    position: fixed;
+    top: calc(50% + 300px);
+    left: 50%;
+
+    background: rgb(155, 15, 15);
+    color: #000;
+
+    padding: 8px 32px;
+    border-radius: 24px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 16pt;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    transform: translate(-50%, -50%);
+}
+
+a.enterButton:hover {
+    background: rgb(211, 16, 16);
+}
+
+a.enterButton:active {
+    background: rgb(59, 14, 14);
+    color: #fff;
+}
+
+@media (max-height: 700px) {
+    h1 {
+        position: fixed;
+        top: 16px;
+
+        transform: translateX(-50%);
+    }
+
+    a.enterButton {
+        position: fixed;
+        top: unset;
+        bottom: 16px;
+
+        transform: translateX(-50%);
+    }
+}

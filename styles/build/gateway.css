@@ -1,0 +1,507 @@
+body {
+  background-color: #0f0f18;
+  background-image: url("../../res/images/background.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  margin: 64px 64px 64px 320px;
+}
+
+div.buttons {
+  display: flex;
+}
+div.buttons button {
+  background: #2e2e57;
+  color: #fff;
+  padding: 4px 12px;
+  margin: 0px 8px 0px 0px;
+  border: none;
+  border-radius: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12pt;
+}
+div.buttons button:hover {
+  background: #393975;
+  color: #fff;
+}
+div.buttons button:active {
+  background: #fff;
+  color: #000;
+}
+
+aside {
+  position: fixed;
+  left: 32px;
+  top: 64px;
+  bottom: 64px;
+  width: 256px;
+}
+aside button.expand {
+  display: none;
+}
+aside img.chaosLogo {
+  width: 64px;
+  height: auto;
+  margin: 0px 12px;
+}
+aside nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+aside nav a {
+  color: red;
+  font-size: 12pt;
+  font-weight: 500;
+  padding: 2px 16px;
+  text-decoration: none;
+}
+aside nav a:after {
+  content: ">";
+  margin-left: 16px;
+}
+aside nav a:hover {
+  background: red;
+  color: #000000;
+}
+aside div.playerInfo {
+  margin: 0px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+aside div.playerInfo p.playerName {
+  margin: 32px 0px 4px 0px;
+  font-size: 18pt;
+}
+aside div.playerInfo div.stats {
+  display: flex;
+  flex-wrap: wrap;
+}
+aside div.playerInfo div.stats div.stat {
+  margin-bottom: 8px;
+  margin-right: 8px;
+  border-radius: 16px;
+  display: flex;
+}
+aside div.playerInfo div.stats div.stat span {
+  color: #000;
+  margin: 4px 12px 4px 8px;
+  display: flex;
+}
+aside div.playerInfo div.stats div.stat span img {
+  width: auto;
+  height: 1.3em;
+  margin-right: 8px;
+  transform: translateY(10%);
+}
+aside div.playerInfo div.stats div.stat button {
+  background: transparent;
+  color: #000;
+  margin: 0px;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 0px 16px 16px 0px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12pt;
+}
+aside div.playerInfo div.stats div.stat button:hover {
+  background: #00000018;
+}
+aside div.playerInfo div.stats div.stat button:active {
+  background: #fff;
+  color: #000;
+}
+aside div.playerInfo div.stat.statProgress {
+  background: lime;
+}
+aside div.playerInfo div.stat.statPosition {
+  background: white;
+}
+aside div.playerInfo div.stat.statPoints {
+  background: #ffd900;
+}
+aside footer {
+  margin-top: 32px;
+  display: flex;
+}
+aside footer img {
+  width: auto;
+  height: 32px;
+  margin-right: 16px;
+}
+
+div.gates {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+div.gates div.gate {
+  --var-gateColor: black;
+  min-width: 160px;
+  margin: 0px 8px 8px 0px;
+  border: 2px solid var(--var-gateColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.gates div.gate p.name {
+  width: 100%;
+  background: var(--var-gateColor);
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 4px 0px;
+  text-align: center;
+}
+div.gates div.gate img {
+  width: auto;
+  height: 128px;
+}
+div.gates div.gate div.keys {
+  display: flex;
+  justify-content: center;
+}
+div.gates div.gate div.keys img {
+  width: 21px;
+  height: 31px;
+  margin: 8px 2px 0px 2px;
+}
+div.gates div.gate a {
+  background: var(--var-gateColor);
+  margin: 8px 0px;
+}
+div.gates div.gate ::selection {
+  background: var(--var-gateColor);
+}
+div.gates div.gate.gate1 {
+  --var-gateColor: #E6335A;
+}
+div.gates div.gate.gate2 {
+  --var-gateColor: #3FBA84;
+}
+div.gates div.gate.gate3 {
+  --var-gateColor: #34A9F6;
+}
+div.gates div.gate.gate4 {
+  --var-gateColor: #FE7B51;
+}
+div.gates div.gate.gate5 {
+  --var-gateColor: #F0BE37;
+}
+div.gates div.gate.gate6 {
+  --var-gateColor: #A74CC1;
+}
+div.gates div.gate.gate7 {
+  --var-gateColor: #282828;
+}
+
+a.enterButton {
+  background: #9b0f0f;
+  color: #000;
+  padding: 4px 24px;
+  border-radius: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 14pt;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a.enterButton:hover {
+  background: #d31010;
+}
+
+a.enterButton:active {
+  background: #fff !important;
+  color: #000;
+}
+
+section header {
+  margin: 16px 0px 8px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+section header h1 {
+  margin: 4px 8px 4px 0px;
+  font-weight: 500;
+  flex-grow: 1;
+}
+
+div.searchBox {
+  border: 2px solid #ff32f1;
+  display: flex;
+}
+div.searchBox input {
+  background: #00000080;
+  color: #fff;
+  padding: 4px 16px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 12pt;
+}
+div.searchBox button {
+  background: #ff32f1;
+  color: #000;
+  padding: 4px 16px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12pt;
+}
+div.searchBox button:hover {
+  background: #ff5ff4;
+  color: #000;
+}
+div.searchBox button:active {
+  background: #fff;
+  color: #000;
+}
+
+div.leaderboardScroller {
+  height: 450px;
+  border: 2px solid #ff33f1;
+  overflow-y: auto;
+}
+div.leaderboardScroller table.leaderboard {
+  width: 100%;
+  border-spacing: 0px;
+}
+div.leaderboardScroller table.leaderboard td {
+  background: #00000080;
+  padding: 4px;
+}
+div.leaderboardScroller table.leaderboard tr:last-child td {
+  border-bottom: none;
+}
+div.leaderboardScroller table.leaderboard tr.top10 {
+  background: #a0226b5d;
+}
+div.leaderboardScroller table.leaderboard td.name {
+  font-family: monospace;
+  font-size: 12pt;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+div.leaderboardScroller table.leaderboard td.gates, div.leaderboardScroller table.leaderboard td.keys, div.leaderboardScroller table.leaderboard td.time {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  white-space: nowrap;
+}
+div.leaderboardScroller table.leaderboard td.gates img, div.leaderboardScroller table.leaderboard td.keys img, div.leaderboardScroller table.leaderboard td.time img {
+  width: auto;
+  height: 1.3em;
+  margin-right: 4px;
+  filter: invert(1);
+  transform: translateY(20%);
+}
+
+div.pageSwitcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.pageSwitcher span {
+  width: 140px;
+  font-size: 14pt;
+  text-align: center;
+}
+div.pageSwitcher button {
+  width: 32px;
+  background: #ff32f1;
+  color: #000;
+  padding: 2px 8px;
+  margin: 2px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 12pt;
+}
+div.pageSwitcher button:hover {
+  background: #ff5ff4;
+}
+div.pageSwitcher button:active {
+  background: #fff;
+  color: #000;
+}
+div.pageSwitcher button:disabled {
+  opacity: 0.3;
+}
+
+@media (max-width: 1024px) and (min-width: 881px) {
+  body {
+    margin: 64px 32px 32px 32px;
+  }
+
+  aside {
+    position: unset;
+    width: unset;
+  }
+  aside img.chaosLogo {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: auto;
+    height: 40px;
+    z-index: 1000;
+  }
+  aside nav {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    background-color: #0f0f18;
+    background-image: url("../../res/images/background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 64px;
+    flex-direction: row;
+    z-index: 100;
+  }
+  aside nav a {
+    padding: 8px 16px;
+  }
+  aside nav a:after {
+    content: "";
+    margin: 0px;
+  }
+  aside div.playerInfo {
+    margin: 0px 0px 8px 0px;
+    flex-direction: row;
+  }
+  aside div.playerInfo p.playerName {
+    margin: 0px;
+    flex-grow: 1;
+  }
+  aside div.playerInfo div.buttons {
+    position: fixed;
+    top: 4px;
+    right: 0px;
+    z-index: 100;
+  }
+  aside div.playerInfo div.stats {
+    justify-content: flex-end;
+  }
+  aside footer {
+    display: none;
+  }
+
+  div.gates {
+    justify-content: center;
+  }
+}
+@media (max-width: 880px) {
+  body {
+    margin: 64px 32px 32px 32px;
+  }
+
+  aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: unset;
+    max-width: 100%;
+    height: unset;
+    max-height: calc(100% - 64px - 16px);
+    background: #0f0f18;
+    padding: 64px 0px 16px 0px;
+    box-shadow: 0px 0px 16px #000;
+    overflow: auto;
+  }
+  aside img.chaosLogo {
+    position: fixed;
+    left: 32px;
+    top: 0px;
+    width: auto;
+    height: 40px;
+    z-index: 10;
+  }
+  aside button.expand {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    transform: translate(-50%, -50%);
+    display: block;
+  }
+  aside button.expand:before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 24px;
+    height: 2px;
+    background: red;
+    content: "";
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.2s;
+  }
+  aside button.expand:after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 24px;
+    height: 2px;
+    background: red;
+    content: "";
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: all 0.2s;
+  }
+  aside nav a {
+    font-size: 16pt;
+  }
+
+  aside:not(.expanded) {
+    width: 96px;
+    height: 40px;
+    background-color: #0f0f18;
+    background-image: url("../../res/images/background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0px;
+    box-shadow: none;
+  }
+  aside:not(.expanded) button.expand:before {
+    top: 16px;
+    width: 16px;
+    transform: translate(-50%, -50%);
+  }
+  aside:not(.expanded) button.expand:after {
+    top: 24px;
+    width: 16px;
+    transform: translate(-50%, -50%);
+  }
+  aside:not(.expanded) nav {
+    display: none;
+  }
+  aside:not(.expanded) div.playerInfo {
+    display: none;
+  }
+  aside:not(.expanded) div.buttons {
+    display: none;
+  }
+  aside:not(.expanded) footer {
+    display: none;
+  }
+
+  div.gates {
+    justify-content: center;
+  }
+
+  div.pageSwitcher button {
+    padding: 4px 8px;
+  }
+}
+
+/*# sourceMappingURL=gateway.css.map */
